@@ -1,11 +1,13 @@
 # encoding:utf-8
 import matplotlib.pyplot as plt
 
+plt.style.use('seaborn')
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
 input_values = [1, 2, 3, 4, 5]
 squraes = [1, 4, 9, 16, 25]
+
 fig, ax = plt.subplots()
 ax.plot(input_values, squraes, linewidth=3)
 
