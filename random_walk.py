@@ -1,6 +1,6 @@
 from random import choice
 
-class Random:
+class RandomWalk:
     """一个生成随机漫步数据的类"""
     def __init__(self, num_points=5000):
         """初始化随机漫步的属性。"""
@@ -10,11 +10,11 @@ class Random:
         self.x_values = [0]
         self.y_values = [0]
 
-    def fill_wallk(self):
+    def fill_walk(self):
         """计算漫步包含的所有点就。"""
 
         # 不断漫步知道列表到达指定的长度。
-        while len(x_values) < self.num_points:
+        while len(self.x_values) < self.num_points:
             
             # 决定前进方向及沿这个方向前进的距离
             x_direction = choice([1, -1])
