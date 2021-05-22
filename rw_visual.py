@@ -5,12 +5,14 @@ from random_walk import RandomWalk
 # 只要程序处于活动状态，就不断地模拟随机漫步。
 while True:
     # 创建一个Random_Walk类的实例
-    rw = RandomWalk(50_000)
+    # rw = RandomWalk(10_000_000) 1000点的时候电脑开始慢卡了
+    rw = RandomWalk(5_000_000)
     rw.fill_walk()
 
     #将所有点都绘制出来
     plt.style.use('classic')
-    fig, ax = plt.subplots()
+    # fig, ax = plt.subplots(figsize=(16, 10), dpi=227)
+    fig, ax = plt.subplots(figsize=(16, 10))
     point_numbers = range(rw.num_points)
 
     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,
